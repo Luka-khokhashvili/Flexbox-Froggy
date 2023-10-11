@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--! meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- title and icon -->
+    <title>Flexbox Froggy - clone</title>
+    <link rel="shortcut icon" href="./style/images/frog-green.svg" type="image/x-icon">
+</head>
+<body>
+    <!-- main divider -->
+    <div class="app">
+        <!-- section for the instructions -->
+        <section id="instructions">
+            <h1 class="main-title">Flexbox froggy</h1>
+            <p class="help-info">
+                The two properties <span class="help">flex-direction</span> and 
+                <span class="help">flex-wrap</span> are used so often together that the 
+                shorthand propety <span class="help">flex-flow</span> was created 
+                to combine them. This shorthand property accepts 
+                the value of the two properties separated by a space. <br>
+                <br>
+                For example, you can use <span class="help" style="border-bottom: none">flex-flow: row wrap</span> 
+                to set rows and wrap them. <br>
+                <br>
+                Try using <span class="help">flex-flow</span> to properly display frogs on the lily pads. <br>
+                <br>
+                "Tip: frogs shoud sit in column"
+            </p>
+            <!-- main editor box -->
+            <div class="editor">
+                <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+                <pre>#pond {
+    display: flex;</pre>
+                <textarea id="textarea"></textarea>
+                <pre>}</pre>
+                <button>Next</button>
+            </div>
+        </section>
+        <!-- section for the pond, lilies and frogs -->
+        <section id="pond">
+            <div id="forefront">
+                <!-- green frogs -->
+                <div class="frog-container">
+                    <div class="frog green"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog green"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog green"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog green"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog green"></div>
+                </div>
+                <!-- red frogs -->
+                <div class="frog-container">
+                    <div class="frog red"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog red"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog red"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog red"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog red"></div>
+                </div>
+                <!-- yellow frogs -->
+                <div class="frog-container">
+                    <div class="frog yellow"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog yellow"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog yellow"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog yellow"></div>
+                </div>
+                <div class="frog-container">
+                    <div class="frog yellow"></div>
+                </div>
+            </div>
+            <div id="background">
+                <!-- green lilies -->
+                <div class="lily-container">
+                    <div class="lily green" style="transform: scale(0.88) rotate(322deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily green" style="transform: scale(0.91) rotate(10deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily green" style="transform: scale(0.95) rotate(102deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily green" style="transform: scale(0.82) rotate(220deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily green" style="transform: scale(0.85) rotate(291deg)"></div>
+                </div>
+                <!-- red lilies -->
+                <div class="lily-container">
+                    <div class="lily red" style="transform: scale(0.93) rotate(222deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily red" style="transform: scale(0.83) rotate(19deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily red" style="transform: scale(0.90) rotate(1deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily red" style="transform: scale(0.96) rotate(244deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily red" style="transform: scale(0.99) rotate(198deg)"></div>
+                </div>
+                <!-- yellow lilies -->
+                <div class="lily-container">
+                    <div class="lily yellow" style="transform: scale(0.94) rotate(101deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily yellow" style="transform: scale(0.87) rotate(97deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily yellow" style="transform: scale(0.89) rotate(20deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily yellow" style="transform: scale(0.92) rotate(77deg)"></div>
+                </div>
+                <div class="lily-container">
+                    <div class="lily yellow" style="transform: scale(0.85) rotate(270deg)"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!--! Copyright. I dont own the idea. All rights remain to the Flexbox Froggy real creators. This is just a clone -->
+    <p class="copyright"><span class="red-text">Disclaimer!!</span>: This is just a clone of one level from the <a href="https://flexboxfroggy.com/" class="link">Flexbox Froggy</a> website.
+    for the education purposes. 
+    all the rights remain to them. please visit <a href="https://flexboxfroggy.com/" class="link">their page</a> to fully experience game itself.</p>
+
+    <!--! script file link -->
+    <script src="./script/app.js"></script>
+</body>
+</html>

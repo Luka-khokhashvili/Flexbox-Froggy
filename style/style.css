@@ -1,0 +1,215 @@
+/* style.css style file for the Flexbox Froggy made by luka khokhashvili( Disclaimer: I dont own the idea. The real creator of the game is Flexbos Froggy at https://flexboxfroggy.com/) */
+
+/* ------------------------------
+    ===== content table =====
+    1. Font links
+    2. Basic styles
+    3. Editor box styles
+    4. Pond styles
+*/
+
+/* 1. Font links(used 'Fredoka One' and 'Source Code Pro' fonts) */
+@font-face {
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/fredokaone/v14/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMlrTA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Font links end */
+
+/* 2. Basic styles */
+body {
+    background-color: rgb(67, 160, 71);
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding: 0;
+}
+
+.main-title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Fredoka one', sans-serif;
+}
+
+.help-info {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.help {
+    padding: 0 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+}
+
+.app {
+    display: flex;
+    
+}
+
+#instructions {
+    padding: 30px;
+    width: 50%;
+}
+/* Basic styles end */
+
+/* 3. Editor box styles */
+.editor {
+    position: relative;
+    background-color: rgb(224, 224, 244);
+    height: 260px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(119, 119, 119);
+    overflow: hidden;
+}
+
+.line-numbers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(153, 153, 153);
+    color: rgb(213, 213, 213);
+    padding: 10px 6px;
+    height: 100%;
+    text-align: right;
+}
+
+pre {
+    margin: 0;
+}
+
+#textarea {
+    height: 44px;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    margin-left: 25px;
+    width: 90%;
+}
+
+button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: rgb(209, 22, 6);
+    border: none;
+    border-radius: 4px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+}
+/* Editor box styles end */
+
+/* 4. Pond styles */
+#pond {
+    position: relative;
+    background-color: rgb(31, 87, 104);
+    width: 50vw;
+    height: 50vw;
+    border-bottom-left-radius: 30px;
+    overflow: hidden;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#forefront {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    padding: 2.5%;
+    display: flex;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    padding: 2.5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.lily-container, .frog-container {
+    width: 20%;
+    height: 20%;
+}
+
+.lily, .frog {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* setting svg icons for lilies and frogs(Each icons used down here is owned by Flexbox Froggy(https://flexboxfroggy.com/). */
+/*! I Dont own any of those icons. */
+/* lilypad icons */
+.lily.green {
+    background-image: url(./images/lilypad-green.svg);
+}
+
+.lily.red {
+    background-image: url(./images/lilypad-red.svg);
+}
+
+.lily.yellow {
+    background-image: url(./images/lilypad-yellow.svg);
+}
+/* frog icons */
+.frog.green {
+    background-image: url(./images/frog-green.svg);
+}
+
+.frog.red {
+    background-image: url(./images/frog-red.svg);
+}
+
+.frog.yellow {
+    background-image: url(./images/frog-yellow.svg);
+}
+/* Pond styles end*/
+
+/*! 5. copyright (I dont own the idea. The real creator of the game is Flexbox Froggy(https://flexboxfroggy.com/))*/
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.link {
+    color: rgb(224, 224, 244);
+}
+
+.red-text {
+    color: red;
+}
+/*! copyright end */
